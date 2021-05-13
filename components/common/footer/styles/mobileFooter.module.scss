@@ -1,0 +1,15 @@
+.link {
+  height: 38px;
+  @apply flex flex-col;
+}
+
+.linkIcon {
+  width: 22px;
+  height: 22px;
+  @apply self-center;
+}
+
+.linkTitle {
+  font-size: 9px;
+  margin-top: auto;
+}

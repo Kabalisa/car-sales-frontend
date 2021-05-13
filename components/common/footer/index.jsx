@@ -1,7 +1,10 @@
+import styles from "./styles/footer.module.scss";
+import { MobileFooter } from "./mobileFooter";
+
 const Footer = () => {
   return (
-    <footer>
-      <h1>footer</h1>
+    <footer className={styles.footer}>
+      <MobileFooter />
     </footer>
   );
 };
