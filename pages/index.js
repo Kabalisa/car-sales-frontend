@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { LandingPageComponent } from "../components";
 
 const LandingPage = () => {
   return (
@@ -8,9 +9,7 @@ const LandingPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>landing page</h1>
-      </main>
+      <LandingPageComponent />
     </div>
   );
 };
