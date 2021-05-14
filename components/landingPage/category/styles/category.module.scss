@@ -1,0 +1,17 @@
+.category {
+  @apply w-full flex justify-between border-b border-gray-250 py-4;
+
+  .category__title {
+    @apply pl-4;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .category__icon {
+    @apply self-center mr-4;
+    width: 15px;
+    height: 15px;
+  }
+}
