@@ -1,5 +1,6 @@
 import { HeroBanner } from "./heroBanner";
 import { Category } from "./category";
+import { CarDealer } from "./carDealer";
 
 const LandingPageComponent = () => {
   const arr = [
@@ -16,8 +17,11 @@ const LandingPageComponent = () => {
       <HeroBanner />
       <section className="mt-1">
         {arr.map((item, index) => (
-          <Category category={item} key={index} />
+          <Category key={index} category={item} />
         ))}
+      </section>
+      <section className="pl-4">
+        <CarDealer />
       </section>
     </main>
   );

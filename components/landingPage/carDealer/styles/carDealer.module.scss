@@ -1,0 +1,23 @@
+.dealersTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.dealerCardContainer {
+  @apply flex mt-4 overflow-x-auto px-2;
+  height: 85px;
+  padding-top: 5px;
+  .dealerCard {
+    @apply flex flex-col justify-center items-center mr-3;
+    min-width: 146px;
+    height: 72px;
+    border-radius: 6px;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.3);
+    .dealerIcon {
+      width: 70%;
+      height: 70%;
+    }
+  }
+}
