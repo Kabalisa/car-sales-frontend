@@ -1,0 +1,36 @@
+.heroBanner__advertise {
+  @apply flex flex-col items-center w-full border-2 border-gray-350 relative;
+  border-radius: 6px;
+  height: 56px;
+
+  .advertise__title {
+    @apply pt-1.5;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .advertise__subTitle {
+    @apply pt-3;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 11px;
+  }
+
+  .advertise__book {
+    @apply text-red-450 absolute right-2 bottom-1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 11px;
+  }
+}
+
+.heroBanner__text {
+  @apply px-9 py-5 text-center font-bold;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+}

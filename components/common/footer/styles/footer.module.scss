@@ -1,6 +1,5 @@
 .footer {
-  @apply container flex absolute bottom-0;
+  @apply container flex absolute bottom-0 border-t border-gray-250;
   padding-top: 14px;
   padding-bottom: 9px;
-  border-top: 1px solid rgba(0, 0, 0, 0.09);
 }

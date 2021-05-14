@@ -1,7 +1,9 @@
+import { HeroBanner } from "./heroBanner";
+
 const LandingPageComponent = () => {
   return (
-    <main>
-      <h1>Landing page component</h1>
+    <main className="container pt-6">
+      <HeroBanner />
     </main>
   );
 };

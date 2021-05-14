@@ -5,8 +5,19 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem'
+        DEFAULT: "1rem",
+        sm: "2rem",
+      },
+    },
+    extend: {
+      colors: {
+        gray: {
+          250: "#e8e8e8",
+          350: "#dedede",
+        },
+        red: {
+          450: "#E03529",
+        },
       },
     },
   },
