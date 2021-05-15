@@ -1,0 +1,37 @@
+.featuredCardContainer {
+  @apply flex mt-4 overflow-x-auto px-2 mr-1;
+  height: 180px;
+  .featuredCard {
+    @apply flex flex-col mr-3 p-1;
+    min-width: 164px;
+    height: 170px;
+    border-radius: 6px;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.3);
+    .featuredImageContainer {
+      width: 156px;
+      height: 93.89px;
+      .featuredImage {
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+      }
+    }
+
+    .featuredCarPrice {
+      @apply text-red-450 mb-1;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 16px;
+      margin-top: auto;
+    }
+
+    .featuredCarType {
+      @apply mb-1;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+}

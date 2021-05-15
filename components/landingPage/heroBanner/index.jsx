@@ -16,7 +16,7 @@ const HeroBanner = () => {
         </Link>
       </div>
       <div className={styles.heroBanner__text}>
-        The Rwandan Leading MarketPlace to buy and sell cars
+        The Rwanda's Leading MarketPlace to buy and sell cars
       </div>
     </section>
   );

@@ -1,12 +1,5 @@
-.dealersTitle {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 19px;
-}
-
 .dealerCardContainer {
-  @apply flex mt-4 overflow-x-auto px-2;
+  @apply flex mt-4 overflow-x-auto px-2 mr-1;
   height: 85px;
   padding-top: 5px;
   .dealerCard {

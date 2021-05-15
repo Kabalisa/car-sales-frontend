@@ -7,7 +7,7 @@ const Header = () => {
       <h1 className={styles.title}>
         <Link href="/">
           <a>
-            cars sal<span className="border-t-2 border-red-600">es</span>
+            Best ca<span className="border-t-2 border-red-600">rs</span>
           </a>
         </Link>
       </h1>
