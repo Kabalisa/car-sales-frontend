@@ -1,6 +1,88 @@
 .title {
-  font-weight: bold;
+  @apply md:self-center md:pb-3 font-bold;
   font-size: 20px;
   line-height: 22px;
   text-transform: uppercase;
+
+  @screen md {
+    font-size: 24px;
+    line-height: 27px;
+  }
+}
+
+.button {
+  @apply hidden md:block bg-red-450 text-white font-bold p-2;
+  border-radius: 10px;
+}
+
+.loginSignup {
+  @apply self-center mr-4 hidden md:block cursor-pointer font-light;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.dropdown {
+  @apply self-center mr-4 hidden md:block cursor-pointer relative;
+
+  &:hover {
+    .dropdownContainer {
+      @apply opacity-100 visible;
+    }
+  }
+
+  .userAvatar {
+    @apply mr-2 flex flex-col justify-center items-center bg-red-430;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    border-radius: 50%;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .username {
+    @apply mr-2 self-center font-light;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .arrowDown {
+    @apply self-center;
+    width: 8px;
+    margin-top: 4px;
+  }
+
+  .dropdownContainer {
+    @apply block bg-white absolute w-auto border-t border-gray-230 opacity-0 invisible;
+    top: 180%;
+    left: -1px;
+    min-width: 164px;
+    white-space: nowrap;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 16px 16px 0 rgb(0 0 0 / 4%);
+    z-index: 1001;
+    transition: all 0.2s;
+
+    .dropdownList {
+      @apply m-0 p-0;
+      list-style-type: none;
+
+      .dropdownItem {
+        @apply border-t border-gray-230;
+        &:hover {
+          @apply bg-gray-220;
+        }
+        .dropdownItem__link {
+          @apply cursor-pointer text-black-120 block font-normal;
+          line-height: 1.43;
+          font-size: 14px;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

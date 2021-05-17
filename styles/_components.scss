@@ -1,23 +1,21 @@
 @layer components {
   .featured-title {
+    @apply font-bold;
     font-style: normal;
-    font-weight: bold;
     font-size: 13px;
     line-height: 19px;
   }
 
   .thin-text {
-    @apply text-gray-360;
+    @apply text-gray-360 font-light;
     font-style: normal;
-    font-weight: 300;
     font-size: 8px;
     line-height: 12px;
   }
 
   .thin-text-1 {
-    @apply text-gray-370;
+    @apply text-gray-370 font-light;
     font-style: normal;
-    font-weight: 300;
     font-size: 7px;
     line-height: 10px;
   }

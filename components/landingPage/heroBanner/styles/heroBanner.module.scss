@@ -4,25 +4,22 @@
   height: 56px;
 
   .advertise__title {
-    @apply pt-1.5;
+    @apply pt-1.5 font-bold;
     font-style: normal;
-    font-weight: bold;
     font-size: 14px;
     line-height: 16px;
   }
 
   .advertise__subTitle {
-    @apply pt-3;
+    @apply pt-3 font-normal;
     font-style: normal;
-    font-weight: normal;
     font-size: 10px;
     line-height: 11px;
   }
 
   .advertise__book {
-    @apply text-red-450 absolute right-2 bottom-1;
+    @apply text-red-450 absolute right-2 bottom-1 font-bold;
     font-style: normal;
-    font-weight: bold;
     font-size: 10px;
     line-height: 11px;
   }

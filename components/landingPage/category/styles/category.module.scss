@@ -2,9 +2,8 @@
   @apply w-full flex justify-between border-b border-gray-250 py-4;
 
   .category__title {
-    @apply pl-4;
+    @apply pl-4 font-normal;
     font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 18px;
   }
