@@ -5,8 +5,8 @@ import styles from "./styles/header.module.scss";
 
 const Header = () => {
   return (
-    <nav className="border-b">
-      <div className="container flex justify-center md:justify-between pt-6 md:pt-3">
+    <nav className="md:border-b">
+      <div className={styles.header}>
         <h1 className={styles.title}>
           <Link href="/">
             <a>
@@ -14,10 +14,10 @@ const Header = () => {
             </a>
           </Link>
         </h1>
-        <div className="flex md:pb-3">
+        <div className="flex">
           <div className={styles.loginSignup}>Login or sign up</div>
           <div className={styles.dropdown}>
-            <div className="flex">
+            <div className="flex h-full">
               <div className={styles.userAvatar}>KI</div>
               <span className={styles.username}>Kabalisa</span>
               <FontAwesomeIcon

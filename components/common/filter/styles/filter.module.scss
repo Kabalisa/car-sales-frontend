@@ -1,0 +1,23 @@
+.filter {
+  @apply container hidden md:flex md:justify-center;
+  height: 45px;
+
+  .filterItem {
+    @apply h-full flex items-center mr-8  text-black-160 cursor-pointer font-medium;
+    font-size: 12px;
+    line-height: 21px;
+    transition: all 0.2s;
+
+    @screen lg {
+      font-size: 14px;
+    }
+
+    &.active {
+      @apply border-b-4 border-black-210 text-black-210 font-bold;
+    }
+
+    &:hover {
+      @apply border-b-4 border-black-210 text-black-210 font-bold;
+    }
+  }
+}
