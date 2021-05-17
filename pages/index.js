@@ -5,7 +5,7 @@ const LandingPage = () => {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Home | Best Cars</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

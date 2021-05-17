@@ -10,16 +10,12 @@ const CarDealer = () => {
   ];
   return (
     <div className="flex flex-col mt-4">
-      <h1 className="featured-title">
-        <Link href="/">
-          <a>Featured Dealers</a>
-        </Link>
-      </h1>
+      <h1 className="featured-title">Featured Dealers</h1>
       <div className={styles.dealerCardContainer}>
         {dealers.map((item, index) => {
           return (
-            <Link href="/">
-              <a className={styles.dealerCard} key={index}>
+            <Link href="/" key={index}>
+              <a className={styles.dealerCard}>
                 <img
                   src={item.src}
                   className={styles.dealerIcon}

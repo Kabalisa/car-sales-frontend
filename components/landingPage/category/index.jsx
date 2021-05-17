@@ -5,7 +5,7 @@ import styles from "./styles/category.module.scss";
 
 const Category = ({ category }) => {
   return (
-    <Link href="/">
+    <Link href="/cars/used-cars">
       <a className={styles.category}>
         <span className={styles.category__title}>{category}</span>
         <FontAwesomeIcon
