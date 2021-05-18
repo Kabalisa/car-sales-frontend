@@ -4,9 +4,11 @@ import styles from "./styles/carDealer.module.scss";
 const CarDealer = () => {
   const dealers = [
     { src: "/images/maserati.png", alt: "cars from maserati" },
+    { src: "/images/ford.png", alt: "cars from ford" },
     { src: "/images/toyota.png", alt: "cars from toyota" },
     { src: "/images/hyundai.png", alt: "cars from hyundai" },
     { src: "/images/ford.png", alt: "cars from ford" },
+    { src: "/images/toyota.png", alt: "cars from toyota" },
   ];
   return (
     <div className="flex flex-col mt-4">

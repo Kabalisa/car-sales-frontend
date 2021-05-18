@@ -1,11 +1,21 @@
 .dealerCardContainer {
-  @apply flex mt-4 overflow-x-auto px-2 mr-1;
+  @apply flex mt-4 overflow-x-auto px-2 mr-1 md:overflow-x-visible md:mr-0 md:justify-center md:flex-wrap md:mt-0;
   height: 85px;
   padding-top: 5px;
+
+  @screen md {
+    height: inherit;
+  }
+
   .dealerCard {
-    @apply flex flex-col justify-center items-center mr-3;
+    @apply flex flex-col justify-center items-center mr-3 md:mr-5 md:mt-5;
     min-width: 146px;
     height: 72px;
+
+    @screen md {
+      width: 170px;
+      height: 70px;
+    }
     .dealerIcon {
       width: 70%;
       height: 70%;
