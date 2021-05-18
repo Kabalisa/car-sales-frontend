@@ -10,7 +10,7 @@ const FeaturedCar = () => {
         </Link>
       </h1>
       <div className={styles.featuredCardContainer}>
-        {["1", "2", "3", "4"].map((item) => {
+        {["1", "2", "3", "4", "5"].map((item) => {
           return (
             <Link href="/" key={item}>
               <a className={`${styles.featuredCard} card-shadow`}>
@@ -26,7 +26,7 @@ const FeaturedCar = () => {
                   <span className="thin-text">Year: 2020 .</span>
                   <span className="thin-text">KM 89,232</span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between md:mt-auto">
                   <span className="thin-text-1">Abou mousab</span>
                   <span className="thin-text-1">10 mins</span>
                 </div>
