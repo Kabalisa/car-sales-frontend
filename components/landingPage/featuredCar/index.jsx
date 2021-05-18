@@ -13,7 +13,7 @@ const FeaturedCar = () => {
         {["1", "2", "3", "4"].map((item) => {
           return (
             <Link href="/" key={item}>
-              <a className={styles.featuredCard}>
+              <a className={`${styles.featuredCard} card-shadow`}>
                 <div className={styles.featuredImageContainer}>
                   <img
                     src="/images/car1.jpeg"

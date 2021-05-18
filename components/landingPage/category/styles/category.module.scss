@@ -1,15 +1,39 @@
 .category {
-  @apply w-full flex justify-between border-b border-gray-250 py-4;
+  @apply w-full flex justify-between border-b border-gray-250 py-4 md:flex-col md:items-center md:border-0;
 
-  .category__title {
-    @apply pl-4 font-normal;
-    font-style: normal;
-    font-size: 12px;
-    line-height: 18px;
+  @screen md {
+    @apply mr-5 mt-5;
+    width: 160px;
+    height: 70px;
+  }
+
+  .category__titleNumber {
+    @apply md:flex md:flex-col md:items-center;
+    .category__title {
+      @apply pl-4 font-normal md:pl-0;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .category__number {
+      @apply font-normal;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 18px;
+
+      &::before {
+        content: "(";
+      }
+
+      &::after {
+        content: ")";
+      }
+    }
   }
 
   .category__icon {
-    @apply self-center mr-4;
+    @apply self-center mr-4 md:hidden;
     width: 15px;
     height: 15px;
   }

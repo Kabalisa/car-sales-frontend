@@ -15,7 +15,7 @@ const CarDealer = () => {
         {dealers.map((item, index) => {
           return (
             <Link href="/" key={index}>
-              <a className={styles.dealerCard}>
+              <a className={`${styles.dealerCard} card-shadow`}>
                 <img
                   src={item.src}
                   className={styles.dealerIcon}
