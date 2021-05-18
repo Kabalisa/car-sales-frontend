@@ -16,7 +16,7 @@ const LandingPageComponent = () => {
   return (
     <main className="md:container pt-6">
       <HeroBanner />
-      <section className="mt-1 md:flex md:justify-center md:flex-wrap md:mt-5">
+      <section className="mt-1 md:flex md:flex-row md:justify-center md:flex-wrap md:mt-5">
         {arr.map((item, index) => (
           <Category key={index} category={item} />
         ))}
