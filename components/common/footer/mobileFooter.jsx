@@ -10,7 +10,7 @@ import styles from "./styles/mobileFooter.module.scss";
 
 const MobileFooter = () => {
   return (
-    <div className="w-full flex justify-between">
+    <div className="w-full flex justify-between md:hidden">
       <Link href="/">
         <a className={styles.link}>
           <FontAwesomeIcon icon={faHome} className={styles.linkIcon} />

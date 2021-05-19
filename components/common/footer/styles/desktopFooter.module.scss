@@ -1,0 +1,46 @@
+.footerColumnContent {
+  @apply px-8;
+  max-width: 768px;
+  width: 100%;
+
+  @screen lg {
+    max-width: 1024px;
+  }
+
+  @screen xl {
+    max-width: 1280px;
+  }
+}
+
+.footerColumnTitle {
+  @apply font-bold;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.footerColumnItem {
+  @apply font-light text-blue-250;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 19px;
+  margin-top: 18px;
+}
+
+.copyright {
+  @apply flex;
+  margin-top: 42px;
+
+  .copyrightIcon {
+    @apply self-center mb-0.5 mr-2;
+    width: 12px;
+    height: 12px;
+  }
+
+  .copyrightText {
+    @apply font-light text-black-210;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 19px;
+  }
+}

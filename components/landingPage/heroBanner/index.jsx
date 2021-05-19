@@ -3,7 +3,7 @@ import styles from "./styles/heroBanner.module.scss";
 
 const HeroBanner = () => {
   return (
-    <section className="flex flex-col px-4">
+    <section className="flex flex-col px-4 md:px-0">
       <div className={styles.heroBanner__advertise}>
         <div className={styles.advertise__title}>
           Advetise Your Business Here !

@@ -21,10 +21,10 @@ const LandingPageComponent = () => {
           <Category key={index} category={item} />
         ))}
       </section>
-      <section className="pl-4">
+      <section className="pl-4 md:pl-0">
         <CarDealer />
       </section>
-      <section className="pl-4">
+      <section className="pl-4 md:pl-0">
         <FeaturedCar />
       </section>
     </main>

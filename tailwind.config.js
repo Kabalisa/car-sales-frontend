@@ -20,6 +20,7 @@ module.exports = {
           360: "#808080",
           365: "#666666",
           370: "#333333",
+          380: "#EEEEEE",
         },
         red: {
           410: "#f23d3d",
@@ -31,7 +32,23 @@ module.exports = {
           160: "#595959",
           210: "#000000",
         },
+        blue: {
+          250: "#0C5582",
+        },
       },
+    },
+    screens: {
+      sm: "640px",
+      // => @media (min-width: 640px) { ... }
+
+      md: "768px",
+      // => @media (min-width: 768px) { ... }
+
+      lg: "1024px",
+      // => @media (min-width: 1024px) { ... }
+
+      xl: "1280px",
+      // => @media (min-width: 1280px) { ... }
     },
   },
   variants: {

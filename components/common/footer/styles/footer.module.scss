@@ -1,5 +1,13 @@
 .footer {
-  @apply container flex fixed bottom-0 border-t border-gray-250 bg-white z-50;
+  @apply container flex fixed bottom-0 border-t border-gray-250 bg-white z-50 md:border-0 md:relative;
   padding-top: 14px;
   padding-bottom: 9px;
+
+  @screen sm {
+    max-width: 100%;
+  }
+
+  @screen md {
+    padding: 0px;
+  }
 }

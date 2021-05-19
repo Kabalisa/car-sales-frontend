@@ -4,6 +4,11 @@
     font-style: normal;
     font-size: 13px;
     line-height: 19px;
+
+    @screen md {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   .thin-text {
