@@ -1,0 +1,20 @@
+.title {
+  @apply hidden md:block text-black-210 font-medium;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.subtitle {
+  @apply font-light text-black-210;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 16px;
+  margin-top: 24px;
+
+  @screen md {
+    font-size: 13px;
+    line-height: 19px;
+    margin-top: 19px;
+  }
+}

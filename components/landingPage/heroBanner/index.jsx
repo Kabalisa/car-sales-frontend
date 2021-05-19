@@ -1,20 +1,10 @@
-import Link from "next/link";
+import { Advertise } from "../../common";
 import styles from "./styles/heroBanner.module.scss";
 
 const HeroBanner = () => {
   return (
     <section className="flex flex-col px-4 md:px-0">
-      <div className={styles.heroBanner__advertise}>
-        <div className={styles.advertise__title}>
-          Advetise Your Business Here !
-        </div>
-        <div className={styles.advertise__subTitle}>
-          Start as low as RWF 20.000
-        </div>
-        <Link href="/">
-          <a className={styles.advertise__book}>Book Now</a>
-        </Link>
-      </div>
+      <Advertise />
       <div className={styles.heroBanner__imageContainer}>
         <img
           alt="herobanner | car in the desert"
