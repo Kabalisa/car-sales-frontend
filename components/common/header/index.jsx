@@ -52,7 +52,9 @@ const Header = () => {
               </ul>
             </div>
           </div>
-          <button className={styles.button}>Sell my car</button>
+          <button className="hidden md:block self-center p-2 red-button">
+            Sell my car
+          </button>
         </div>
       </div>
     </nav>

@@ -13,16 +13,6 @@
     }
   }
 
-  .button {
-    @apply hidden md:block bg-red-450 text-white font-semibold p-2 self-center;
-    font-size: 14px;
-    border-radius: 10px;
-
-    &:hover {
-      @apply bg-red-410;
-    }
-  }
-
   .loginSignup {
     @apply self-center mr-4 hidden md:block cursor-pointer font-light;
     font-style: normal;

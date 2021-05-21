@@ -17,7 +17,7 @@ const CarListComponent = () => {
         </div>
       </section>
       <ResultCategory />
-      <section className="px-4 flex justify-between border-2 py-2">
+      <section className="px-4 flex justify-between border-2 md:border-0 py-2">
         <Filter />
         <Sort />
       </section>

@@ -1,0 +1,43 @@
+.timesIcon {
+  width: 18px;
+}
+
+.fiterHearder {
+  @apply flex justify-between fixed w-full top-0 bg-white;
+  box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+  padding: 15px 20px;
+
+  .headerTitle {
+    @apply font-semibold;
+    font-size: 16px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+  }
+
+  .headerClear {
+    @apply font-semibold text-red-450;
+  }
+}
+
+.filterBody {
+  @apply flex flex-col;
+  padding: 20px 15px;
+  margin: 50px 0px 70px;
+
+  .filterSectionTitle {
+    @apply mb-2;
+    font-size: 15px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+}
+
+.filterFooter {
+  @apply fixed w-full bottom-0 text-center bg-white;
+  box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+  padding: 15px 20px;
+}

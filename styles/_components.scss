@@ -24,4 +24,32 @@
     font-size: 7px;
     line-height: 10px;
   }
+
+  .red-button {
+    @apply bg-red-450 text-white font-semibold;
+    font-size: 14px;
+    border-radius: 10px;
+
+    &:hover {
+      @apply bg-red-410;
+    }
+  }
+
+  .app-select {
+    @apply border border-gray-180 outline-none appearance-none;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 16px;
+    background: url("/images/arrowDown.png");
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: calc(100% - 16px);
+  }
+
+  .app-input {
+    @apply border border-gray-180 outline-none;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 26px;
+  }
 }
