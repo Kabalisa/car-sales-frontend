@@ -1,0 +1,23 @@
+.sortIcon {
+  @apply md:hidden mr-1;
+  width: 13px;
+}
+
+.sortText {
+  @apply font-medium md:font-semibold text-black-210;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  &::after {
+    @screen md {
+      content: ":";
+    }
+  }
+}
+
+.orderSelect {
+  @apply border border-gray-180 p-1 outline-none absolute opacity-0 right-0 md:relative md:opacity-100;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 16px;
+}
