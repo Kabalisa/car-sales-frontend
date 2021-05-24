@@ -38,12 +38,17 @@
   .app-select {
     @apply border border-gray-180 outline-none appearance-none;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
     background: url("/images/arrowDown.png");
     background-repeat: no-repeat;
     background-position-y: 50%;
     background-position-x: calc(100% - 16px);
+
+    @screen md {
+      background: white;
+      appearance: auto !important;
+    }
   }
 
   .app-input {

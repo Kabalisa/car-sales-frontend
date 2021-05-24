@@ -3,7 +3,7 @@
 }
 
 .fiterHearder {
-  @apply flex justify-between fixed w-full top-0 bg-white;
+  @apply flex justify-between fixed w-full top-0 bg-white md:hidden;
   box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
   padding: 15px 20px;
 
@@ -26,6 +26,11 @@
   padding: 20px 15px;
   margin: 50px 0px 70px;
 
+  @screen md {
+    margin: 0px;
+    padding: 30px 15px 20px;
+  }
+
   .filterSectionTitle {
     @apply mb-2;
     font-size: 15px;
@@ -37,7 +42,7 @@
 }
 
 .filterFooter {
-  @apply fixed w-full bottom-0 text-center bg-white;
+  @apply fixed w-full bottom-0 text-center bg-white md:hidden;
   box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
   padding: 15px 20px;
 }

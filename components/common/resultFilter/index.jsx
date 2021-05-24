@@ -67,15 +67,15 @@ const ResultFilter = ({ handleToggleModlal }) => {
           <ul className="flex flex-col">
             <li>
               <input type="checkbox" id="badges1" name="badges1" value="1" className="mr-2" />
-              <label for="badges1">Full service history</label>
+              <label htmlFor="badges1">Full service history</label>
             </li>
             <li>
               <input type="checkbox" id="badges2" name="badges2" value="2" className="mr-2" />
-              <label for="badges2">Urgent</label>
+              <label htmlFor="badges2">Urgent</label>
             </li>
             <li>
               <input type="checkbox" id="badges3" name="badges3" value="3" className="mr-2" />
-              <label for="badges3">Warranty</label>
+              <label htmlFor="badges3">Warranty</label>
             </li>
           </ul>
         </div>

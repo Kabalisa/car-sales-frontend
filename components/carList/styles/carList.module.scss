@@ -18,3 +18,14 @@
     margin-top: 19px;
   }
 }
+
+.filterResult {
+  @apply bg-gray-390 hidden md:block;
+  min-width: 256px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+
+  @screen lg {
+    width: 256px;
+  }
+}
