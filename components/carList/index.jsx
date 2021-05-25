@@ -1,6 +1,7 @@
 import { Advertise, ResultFilter } from "../common";
 import { ResultCategory } from "./resultCategory";
 import { Sort, Filter } from "./sortFilter";
+import { PromotedCar } from "./promotedCar";
 import styles from "./styles/carList.module.scss";
 
 const CarListComponent = () => {
@@ -24,6 +25,13 @@ const CarListComponent = () => {
         <section className="px-4 flex justify-between border-2 md:border-0 py-2">
           <Filter />
           <Sort />
+        </section>
+        <section className="px-4 mt-3">
+          <div className="flex justify-between flex-wrap">
+            <PromotedCar />
+            <PromotedCar />
+            <PromotedCar />
+          </div>
         </section>
       </div>
     </main>

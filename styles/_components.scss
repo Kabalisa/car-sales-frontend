@@ -11,6 +11,13 @@
     }
   }
 
+  .featured-title-02 {
+    @apply font-bold;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 19px;
+  }
+
   .thin-text {
     @apply text-gray-360 font-light;
     font-style: normal;
@@ -19,10 +26,17 @@
   }
 
   .thin-text-1 {
-    @apply text-gray-370 font-light;
+    @apply text-gray-410 font-light;
     font-style: normal;
     font-size: 7px;
     line-height: 10px;
+  }
+
+  .thin-text-2 {
+    @apply text-gray-370 font-light;
+    font-style: normal;
+    font-size: 10px;
+    line-height: 15px;
   }
 
   .red-button {

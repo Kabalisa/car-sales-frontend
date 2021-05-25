@@ -1,0 +1,54 @@
+.PromotedCar {
+  @apply flex flex-col border border-gray-180 mt-3;
+  width: 205px;
+  height: 256px;
+
+  .PromotedCarImageContainer {
+    @apply relative;
+    width: 203px;
+    height: 144px;
+
+    .PromotedCarImage {
+      @apply w-full h-full;
+      object-fit: cover;
+    }
+
+    .cardStatusContainer {
+      @apply absolute flex;
+      top: 10px;
+      left: 5px;
+
+      .cardStatus {
+        @apply p-1.5 font-medium text-white mx-2;
+        font-style: normal;
+        font-size: 10px;
+        line-height: 10px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .sellingPrice {
+    @apply font-light text-gray-360 mb-2;
+    font-size: 12px;
+    line-height: 15px;
+    font-style: normal;
+  }
+
+  .carName {
+    @apply text-gray-410 self-center mt-1;
+    width: 171px;
+    height: 18px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+  }
+
+  .promoteCarIcon {
+    @apply mr-1 text-gray-365;
+    width: 21px;
+    height: 21px;
+  }
+}
