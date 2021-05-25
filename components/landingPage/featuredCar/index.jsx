@@ -11,14 +11,12 @@ const FeaturedCar = () => {
       </h1>
       <div className={styles.featuredCardContainer}>
         {["1", "2", "3", "4", "5"].map((item) => {
+          let src = `/images/car${item}.jpeg`;
           return (
             <Link href="/" key={item}>
               <a className={`${styles.featuredCard} card-shadow`}>
                 <div className={styles.featuredImageContainer}>
-                  <img
-                    src="/images/car1.jpeg"
-                    className={styles.featuredImage}
-                  />
+                  <img src={src} className={styles.featuredImage} />
                 </div>
                 <span className={styles.featuredCarPrice}>RWF 8,580,000</span>
                 <span className={styles.featuredCarType}>BMW x6</span>
