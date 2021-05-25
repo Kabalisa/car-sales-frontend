@@ -1,0 +1,34 @@
+.carName {
+  @apply self-end uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.lightText {
+  @apply font-light text-gray-360 mb-1;
+  font-size: 13px;
+  line-height: 19px;
+  font-style: normal;
+}
+
+.motorImageContainer {
+  @apply mr-4 relative;
+  width: 183px;
+  height: 116px;
+
+  .imageNumber {
+    @apply p-1 font-medium text-white absolute bg-black-220;
+    font-size: 10px;
+    line-height: 9px;
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+.locationIcon {
+  @apply mr-2;
+  width: 10px;
+  height: 15px;
+}

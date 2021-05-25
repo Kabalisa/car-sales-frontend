@@ -17,14 +17,6 @@
       @apply absolute flex;
       top: 10px;
       left: 5px;
-
-      .cardStatus {
-        @apply p-1.5 font-medium text-white mx-2;
-        font-style: normal;
-        font-size: 10px;
-        line-height: 10px;
-        border-radius: 8px;
-      }
     }
   }
 

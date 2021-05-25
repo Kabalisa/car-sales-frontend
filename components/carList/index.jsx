@@ -2,6 +2,7 @@ import { Advertise, ResultFilter } from "../common";
 import { ResultCategory } from "./resultCategory";
 import { Sort, Filter } from "./sortFilter";
 import { PromotedCar } from "./promotedCar";
+import { ResultCarCard } from "./resultCarCard";
 import styles from "./styles/carList.module.scss";
 
 const CarListComponent = () => {
@@ -26,11 +27,16 @@ const CarListComponent = () => {
           <Filter />
           <Sort />
         </section>
-        <section className="px-4 mt-3">
-          <div className="flex justify-between flex-wrap">
+        <section className="px-4 mb-20">
+          <div className="flex justify-between flex-wrap mt-3">
             <PromotedCar />
             <PromotedCar />
             <PromotedCar />
+          </div>
+          <div className="flex flex-col mt-6">
+            <ResultCarCard />
+            <ResultCarCard />
+            <ResultCarCard />
           </div>
         </section>
       </div>

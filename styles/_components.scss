@@ -39,6 +39,13 @@
     line-height: 15px;
   }
 
+  .thin-text-3 {
+    @apply font-light;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 19px;
+  }
+
   .red-button {
     @apply bg-red-450 text-white font-semibold;
     font-size: 14px;
@@ -70,5 +77,13 @@
     border-radius: 8px;
     font-size: 15px;
     line-height: 26px;
+  }
+
+  .cardStatus {
+    @apply p-1.5 font-medium text-white;
+    font-style: normal;
+    font-size: 10px;
+    line-height: 10px;
+    border-radius: 8px;
   }
 }
