@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendarAlt,
   faTachometerAlt,
+  faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles/promotedCar.module.scss";
 
@@ -20,13 +21,13 @@ const PromotedCar = () => {
         </div>
       </div>
       <div className="w-full flex flex-col md:items-center mt-2">
-        <span className={styles.sellingPrice}>Selling price</span>
+        <span className="thin-text-3 text-gray-360 mb-2">Selling price</span>
         <span className="featured-title-02 text-red-450">RWF 6,530,000</span>
       </div>
       <h1 className={`featured-title-02 uppercase ${styles.carName}`}>
         2009 Harley Davidiston V
       </h1>
-      <div className="flex justify-between w-2/4 md:w-3/4 md:self-center mt-2 mb-3 md:mb-0">
+      <div className="flex justify-between w-2/4 md:w-3/4 md:self-center mt-2">
         <div className="flex">
           <FontAwesomeIcon
             icon={faCalendarAlt}
@@ -42,6 +43,10 @@ const PromotedCar = () => {
           <span className="thin-text-2 self-end">72,000</span>
         </div>
       </div>
+      <button className="callButton">
+        <FontAwesomeIcon icon={faPhoneAlt} className="callIcon" />
+        Call
+      </button>
     </div>
   );
 };

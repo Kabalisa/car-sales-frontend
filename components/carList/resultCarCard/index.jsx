@@ -1,21 +1,48 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMapMarkerAlt,
+  faCalendarAlt,
+  faTachometerAlt,
+  faPhoneAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles/resultCarCard.module.scss";
 
 const ResultCarCard = () => {
   return (
-    <div className="pt-1 w-full border-t-2 border-gray-360 mt-2">
-      <div className="flex flex-col-reverse md:flex-col mt-2 border-l-4 border-yellow-110 py-2 px-4">
-        <div className="flex justify-between relative">
+    <div className="pt-1 w-full md:border-t-2 border-gray-360 mt-2">
+      <div className={styles.resultCarCard}>
+        <div className="flex flex-col-reverse md:flex-row md:justify-between relative">
+          <button className="callButton">
+            <FontAwesomeIcon icon={faPhoneAlt} className="callIcon" />
+            Call
+          </button>
+          <div className="flex md:hidden justify-between w-2/4 md:w-3/4 md:self-center mt-2">
+            <div className="flex">
+              <FontAwesomeIcon
+                icon={faCalendarAlt}
+                className={styles.promoteCarIcon}
+              />
+              <span className="thin-text-2 self-end">2019</span>
+            </div>
+            <div className="flex">
+              <FontAwesomeIcon
+                icon={faTachometerAlt}
+                className={styles.promoteCarIcon}
+              />
+              <span className="thin-text-2 self-end">72,000</span>
+            </div>
+          </div>
           <h1 className={styles.carName}>Harley Davidison V-ROD 2019</h1>
-          <div className="flex flex-col items-center">
-            <span className="thin-text-3 text-gray-360">Selling Price</span>
+          <div className="flex flex-col md:items-center mt-2 md:mt-0">
+            <span className="thin-text-3 text-gray-360 mb-2 md:mb-0">
+              Selling Price
+            </span>
             <span className="featured-title-02 text-red-450">
               RWF 6,350,000
             </span>
           </div>
           <div
-            className="cardStatus bg-yellow-110 absolute"
+            className="cardStatus bg-yellow-110 absolute hidden md:block"
             style={{ top: "-15px" }}
           >
             Promoted
@@ -30,7 +57,7 @@ const ResultCarCard = () => {
             />
             <div className={styles.imageNumber}>11 images</div>
           </div>
-          <div className="flex flex-col flex-1">
+          <div className="hidden md:flex flex-col flex-1">
             <h2 className="featured-title-02 uppercase">
               harley davidson v-rod
             </h2>

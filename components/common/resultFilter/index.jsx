@@ -20,7 +20,7 @@ const ResultFilter = ({ handleToggleModlal }) => {
             <select
               name="order"
               id="order"
-              className="app-select w-full p-3 mb-6"
+              className="app-select w-full p-3 md:p-2 mb-6"
               key={index}
             >
               <option value="volvo">Default</option>
@@ -45,11 +45,11 @@ const ResultFilter = ({ handleToggleModlal }) => {
         <div className="flex flex-col mb-6">
           <span className={styles.filterSectionTitle}>Year</span>
           <div className="flex justify-between">
-            <select name="order" id="order" className="app-select w-5/12 p-3">
+            <select name="order" id="order" className="app-select w-5/12 p-3 md:p-2">
               <option value="volvo">Default</option>
               <option value="saab">Newest to oldest</option>
             </select>
-            <select name="order" id="order" className="app-select w-5/12 p-3">
+            <select name="order" id="order" className="app-select w-5/12 p-3 md:p-2">
               <option value="volvo">Default</option>
               <option value="saab">Newest to oldest</option>
             </select>
@@ -57,7 +57,7 @@ const ResultFilter = ({ handleToggleModlal }) => {
         </div>
         <div className="flex flex-col mb-6">
           <span className={styles.filterSectionTitle}>Seller type</span>
-          <select name="order" id="order" className="app-select w-full p-3">
+          <select name="order" id="order" className="app-select w-full p-3 md:p-2">
             <option value="volvo">Default</option>
             <option value="saab">Newest to oldest</option>
           </select>

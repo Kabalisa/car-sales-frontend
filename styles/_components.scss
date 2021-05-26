@@ -86,4 +86,17 @@
     line-height: 10px;
     border-radius: 8px;
   }
+
+  .callButton {
+    @apply self-end border border-red-450 outline-none text-red-450 flex font-medium py-1 px-4 md:hidden mt-4;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 6px;
+
+    .callIcon {
+      @apply mr-2 self-center;
+      width: 12px;
+      height: 12px;
+    }
+  }
 }

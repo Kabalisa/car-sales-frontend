@@ -28,7 +28,7 @@ const CarListComponent = () => {
           <Sort />
         </section>
         <section className="md:px-4 mb-20 px-0">
-          <div className="flex justify-between flex-wrap mt-3 flex-col md:flex-wrap">
+          <div className="flex justify-between flex-wrap mt-3 flex-col md:flex-row md:flex-wrap">
             <PromotedCar />
             <PromotedCar />
             <PromotedCar />
