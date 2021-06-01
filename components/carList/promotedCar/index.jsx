@@ -1,12 +1,24 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendarAlt,
   faTachometerAlt,
   faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import { CarImagesSlider } from "../../common";
 import styles from "./styles/promotedCar.module.scss";
 
 const PromotedCar = () => {
+  const [activeIndex, setActiveindex] = useState(1);
+
+  const images = [
+    "/images/car5.jpeg",
+    "/images/car3.jpeg",
+    "/images/car4.jpeg",
+    "/images/car1.jpeg",
+    "/images/car2.jpeg",
+  ];
+
   return (
     <div className={styles.PromotedCar}>
       <div className={styles.PromotedCarImageContainer}>
@@ -15,10 +27,12 @@ const PromotedCar = () => {
           src="/images/moto.jpeg"
           className={styles.PromotedCarImage}
         />
+        <CarImagesSlider images={images} setActiveindex={setActiveindex} />
         <div className={styles.cardStatusContainer}>
           <div className="cardStatus bg-red-450 mx-2">Promoted</div>
           <div className="cardStatus bg-blue-270 mx-2">Negotiable</div>
         </div>
+        <div className="sliderNumber">{`${activeIndex}/${images.length}`}</div>
       </div>
       <div className="w-full flex flex-col md:items-center mt-2">
         <span className="thin-text-3 text-gray-360 mb-2">Selling price</span>

@@ -99,4 +99,13 @@
       height: 12px;
     }
   }
+
+  .sliderNumber {
+    @apply p-1 font-medium text-white absolute flex md:hidden;
+    font-size: 12px;
+    line-height: 9px;
+    bottom: 10px;
+    left: 10px;
+    z-index: 5;
+  }
 }

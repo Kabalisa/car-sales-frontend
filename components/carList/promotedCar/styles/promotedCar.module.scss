@@ -21,7 +21,7 @@
     }
 
     .PromotedCarImage {
-      @apply w-full h-full;
+      @apply w-full h-full hidden md:block;
       object-fit: cover;
     }
 

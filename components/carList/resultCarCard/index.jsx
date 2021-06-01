@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
@@ -5,9 +6,20 @@ import {
   faTachometerAlt,
   faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import { CarImagesSlider } from "../../common";
 import styles from "./styles/resultCarCard.module.scss";
 
 const ResultCarCard = () => {
+  const [activeIndex, setActiveindex] = useState(1);
+
+  const images = [
+    "/images/car1.jpeg",
+    "/images/car2.jpeg",
+    "/images/car3.jpeg",
+    "/images/car4.jpeg",
+    "/images/car5.jpeg",
+  ];
+
   return (
     <div className="pt-1 w-full md:border-t-2 border-gray-360 mt-2">
       <div className={styles.resultCarCard}>
@@ -53,9 +65,11 @@ const ResultCarCard = () => {
             <img
               alt="searched motor"
               src="/images/car3.jpeg"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover hidden md:block"
             />
+            <CarImagesSlider images={images} setActiveindex={setActiveindex} />
             <div className={styles.imageNumber}>11 images</div>
+            <div className="sliderNumber">{`${activeIndex}/${images.length}`}</div>
           </div>
           <div className="hidden md:flex flex-col flex-1">
             <h2 className="featured-title-02 uppercase">

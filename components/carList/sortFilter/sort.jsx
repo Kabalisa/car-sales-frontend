@@ -9,7 +9,10 @@ const Sort = () => {
         <FontAwesomeIcon icon={faSortAmountDown} className={styles.sortIcon} />
         <span className={styles.sortText}>Sort</span>
       </label>
-      <select name="order" id="order" className="app-select p-1 absolute opacity-0 right-0 md:relative md:opacity-100">
+      <select
+        name="order"
+        className="app-select p-1 absolute opacity-0 right-0 md:relative md:opacity-100"
+      >
         <option value="volvo">Default</option>
         <option value="saab">Newest to oldest</option>
         <option value="mercedes">Oldest to Newest</option>
