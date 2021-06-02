@@ -5,6 +5,7 @@ import {
   faTachometerAlt,
   faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 import { CarImagesSlider } from "../../common";
 import styles from "./styles/promotedCar.module.scss";
 
@@ -21,19 +22,21 @@ const PromotedCar = () => {
 
   return (
     <div className={styles.PromotedCar}>
-      <div className={styles.PromotedCarImageContainer}>
-        <img
-          alt="promoted car"
-          src="/images/moto.jpeg"
-          className={styles.PromotedCarImage}
-        />
-        <CarImagesSlider images={images} setActiveindex={setActiveindex} />
-        <div className={styles.cardStatusContainer}>
-          <div className="cardStatus bg-red-450 mx-2">Promoted</div>
-          <div className="cardStatus bg-blue-270 mx-2">Negotiable</div>
-        </div>
-        <div className="sliderNumber">{`${activeIndex}/${images.length}`}</div>
-      </div>
+      <Link href="/cars/used-cars/toyota">
+        <a className={styles.PromotedCarImageContainer}>
+          <img
+            alt="promoted car"
+            src="/images/moto.jpeg"
+            className={styles.PromotedCarImage}
+          />
+          <CarImagesSlider images={images} setActiveindex={setActiveindex} layout="two" />
+          <div className={styles.cardStatusContainer}>
+            <div className="cardStatus bg-red-450 mx-2">Promoted</div>
+            <div className="cardStatus bg-blue-270 mx-2">Negotiable</div>
+          </div>
+          <div className="sliderNumber">{`${activeIndex}/${images.length}`}</div>
+        </a>
+      </Link>
       <div className="w-full flex flex-col md:items-center mt-2">
         <span className="thin-text-3 text-gray-360 mb-2">Selling price</span>
         <span className="featured-title-02 text-red-450">RWF 6,530,000</span>

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { CarListComponent } from "../../components";
+import { CarListComponent } from "../../../components";
 
 const CarList = () => {
   const router = useRouter();

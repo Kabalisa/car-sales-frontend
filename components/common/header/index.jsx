@@ -3,9 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles/header.module.scss";
 
-const Header = () => {
+const Header = ({ layout }) => {
   return (
-    <nav className="md:border-b">
+    <nav
+      className={`${styles.headerContainer} ${
+        layout === "secondType" ? styles.headerHidden : ""
+      }`}
+    >
       <div className={styles.header}>
         <h1 className={styles.title}>
           <Link href="/">

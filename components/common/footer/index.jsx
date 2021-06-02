@@ -2,9 +2,13 @@ import styles from "./styles/footer.module.scss";
 import { MobileFooter } from "./mobileFooter";
 import { DesktopFooter } from "./desktopFooter";
 
-const Footer = () => {
+const Footer = ({ layout }) => {
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={`${styles.footer} ${
+        layout === "secondType" ? styles.footerHidden : ""
+      }`}
+    >
       <MobileFooter />
       <DesktopFooter />
     </footer>

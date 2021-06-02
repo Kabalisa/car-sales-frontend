@@ -10,4 +10,8 @@
   @screen md {
     padding: 0px;
   }
+
+  &.footerHidden {
+    @apply hidden md:block;
+  }
 }

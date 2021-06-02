@@ -67,7 +67,7 @@ const ResultCarCard = () => {
               src="/images/car3.jpeg"
               className="w-full h-full object-cover hidden md:block"
             />
-            <CarImagesSlider images={images} setActiveindex={setActiveindex} />
+            <CarImagesSlider images={images} setActiveindex={setActiveindex} layout="two" />
             <div className={styles.imageNumber}>11 images</div>
             <div className="sliderNumber">{`${activeIndex}/${images.length}`}</div>
           </div>

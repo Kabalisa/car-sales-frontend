@@ -2,13 +2,13 @@ import { Header } from "../header";
 import { Footer } from "../footer";
 import { Filter } from "../filter";
 
-const AppLayout = ({ children }) => {
+const AppLayout = ({ children, layout }) => {
   return (
     <>
-      <Header />
+      <Header layout={layout} />
       <Filter />
       {children}
-      <Footer />
+      <Footer layout={layout} />
     </>
   );
 };
