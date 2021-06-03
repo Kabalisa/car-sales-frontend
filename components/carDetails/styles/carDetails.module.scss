@@ -47,10 +47,73 @@
     grid-area: upperPart;
     @apply flex flex-col px-4;
     margin-top: 30px;
+
+    .price {
+      @apply font-bold text-red-450 mt-4;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .carName {
+      @apply font-bold uppercase;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    .postTime {
+      @apply font-light mt-2 text-black-230 border-b border-gray-180 pb-3;
+      font-size: 11px;
+      line-height: 16px;
+    }
   }
 
   .carDetails__detailsList {
     grid-area: detailsList;
-    @apply px-4;
+    margin-top: 20px;
+
+    .detailTitle {
+      @apply font-semibold;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 25px;
+    }
+
+    .firstDetails {
+      @apply w-full flex px-4 pb-3 border-b border-gray-180 mt-2;
+
+      .firstDetails__title {
+        @apply w-2/5 font-medium;
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      .firstDetails__content {
+        @apply w-3/5 font-light;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    .secondDetails {
+      @apply w-full flex px-4 pb-3 border-b border-gray-180 mt-2;
+
+      .secondDetails__title {
+        @apply w-2/5 font-medium;
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      .secondDetails__content {
+        @apply w-3/5 font-light;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  .callFooter {
+    @apply fixed w-full bottom-0 text-center bg-white md:hidden;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+    padding: 15px 20px;
   }
 }
