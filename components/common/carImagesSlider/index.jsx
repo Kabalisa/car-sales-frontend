@@ -5,26 +5,41 @@ import styles from "./styles/carImagesSlider.module.scss";
 SwiperCore.use([Pagination]);
 
 const CarImagesSlider = ({ images, setActiveindex, layout }) => {
-  return (
+  const slides = [];
+
+  images.map((item, index) => {
+    slides.push(
+      <SwiperSlide tag="li" key={index}>
+        <img src={item} alt={item} className="w-full h-full object-cover" />
+      </SwiperSlide>
+    );
+  });
+
+  const handleSlideChangeEnd = ({ activeIndex }) => {
+    if (setActiveindex) {
+      setActiveindex(activeIndex + 1);
+    }
+  };
+
+  return layout === "two" ? (
     <Swiper
       id="main"
       tag="section"
       wrapperTag="ul"
       pagination={{ clickable: true, dynamicBullets: true }}
-      onSlideChangeTransitionEnd={({ activeIndex }) => {
-        if (setActiveindex) {
-          setActiveindex(activeIndex + 1);
-        }
-      }}
-      className={layout === "two" ? styles.layoutTwo : ""}
+      onSlideChangeTransitionEnd={handleSlideChangeEnd}
+      className={styles.layoutTwo}
     >
-      {images.map((item, index) => {
-        return (
-          <SwiperSlide tag="li" key={index}>
-            <img src={item} alt={item} className="w-full h-full object-cover" />
-          </SwiperSlide>
-        );
-      })}
+      {slides}
+    </Swiper>
+  ) : (
+    <Swiper
+      id="main"
+      tag="section"
+      wrapperTag="ul"
+      onSlideChangeTransitionEnd={handleSlideChangeEnd}
+    >
+      {slides}
     </Swiper>
   );
 };

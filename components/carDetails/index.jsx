@@ -12,7 +12,7 @@ const CarDetailsComponent = () => {
 
   return (
     <main className="md:container">
-      <section>
+      <section className={styles.carImageSlider}>
         <CarImagesSlider images={images} />
       </section>
     </main>

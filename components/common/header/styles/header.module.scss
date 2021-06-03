@@ -1,13 +1,31 @@
 .headerContainer {
   @apply md:border-b;
 
-  &.headerHidden {
-    @apply hidden md:block;
+  .goBackContainer {
+    @apply container flex items-center md:hidden absolute;
+    z-index: 20;
+    height: 40px;
+
+    .goBack {
+      @apply bg-white flex justify-center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+
+      .longArrowLeft {
+        width: 17px;
+      }
+    }
   }
 
   .header {
     @apply container flex justify-center md:justify-between;
     height: 60px;
+
+    &.headerHidden {
+      @apply hidden md:block;
+    }
+
     .title {
       @apply self-center font-bold;
       font-size: 20px;

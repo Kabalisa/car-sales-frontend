@@ -1,16 +1,29 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faLongArrowAltLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles/header.module.scss";
 
 const Header = ({ layout }) => {
   return (
-    <nav
-      className={`${styles.headerContainer} ${
-        layout === "secondType" ? styles.headerHidden : ""
-      }`}
-    >
-      <div className={styles.header}>
+    <nav className={styles.headerContainer}>
+      <div className={layout ? styles.goBackContainer : "hidden"}>
+        <Link href="/">
+          <a className={styles.goBack}>
+            <FontAwesomeIcon
+              icon={faLongArrowAltLeft}
+              className={styles.longArrowLeft}
+            />
+          </a>
+        </Link>
+      </div>
+      <div
+        className={`${styles.header} ${
+          layout === "secondType" ? styles.headerHidden : ""
+        }`}
+      >
         <h1 className={styles.title}>
           <Link href="/">
             <a>
