@@ -1,4 +1,56 @@
-.carImageSlider {
-  width: 100%;
-  height: 285px;
+.carDetails {
+  @apply md:container grid;
+  grid-template-areas:
+    "slider"
+    "upperPart"
+    "detailsList";
+
+  .carImageSlider {
+    @apply relative;
+    width: 100%;
+    height: 285px;
+    grid-area: slider;
+
+    .slidesNumber {
+      @apply absolute bg-gray-420 text-white font-medium p-1.5 flex flex-col items-center justify-center;
+      bottom: 10px;
+      left: 10px;
+      font-size: 12px;
+      line-height: 10px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+
+    .iconsContainer {
+      @apply flex absolute;
+      bottom: -11px;
+      right: 0;
+      z-index: 1;
+
+      .iconHolder {
+        @apply bg-white flex justify-center;
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        margin-right: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: rgb(0 0 0 / 25%) 0px 2px 4px;
+
+        .icon {
+          width: 12px;
+        }
+      }
+    }
+  }
+
+  .carDetails__upperPart {
+    grid-area: upperPart;
+    @apply flex flex-col px-4;
+    margin-top: 30px;
+  }
+
+  .carDetails__detailsList {
+    grid-area: detailsList;
+    @apply px-4;
+  }
 }
