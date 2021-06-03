@@ -1,0 +1,45 @@
+.content {
+  @apply absolute overscroll-auto outline-none;
+  inset: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 20px;
+  max-height: 200px;
+}
+
+.overlay {
+  @apply fixed inset-0;
+  z-index: 200;
+  background-color: rgba(43, 45, 46, 0.95);
+}
+
+.shareTile {
+  @apply font-semibold;
+  font-size: 20px;
+}
+
+.timesIcon {
+  @apply absolute right-0;
+  bottom: 4px;
+  width: 16px;
+}
+
+.sharedUrl {
+  @apply border-0 outline-none font-normal bg-gray-230;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 8px;
+}
+
+.socialLink {
+  @apply border-b border-gray-230;
+  margin: 0px 12px;
+
+  .socialIcon {
+    width: 32px;
+    height: 32px;
+  }
+}
