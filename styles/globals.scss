@@ -1,5 +1,6 @@
 @import "swiper/swiper.scss";
 @import "swiper/components/pagination/pagination.scss";
+@import "swiper/components/navigation/navigation.scss";
 @import "./components";
 @import "./utilities";
 @tailwind base;
@@ -39,4 +40,23 @@ a {
 
 .swiper-pagination-bullet-active {
   opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply hidden md:flex;
+
+  @screen md {
+    @apply hover:bg-white text-black-210;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.82);
+    transition: all 0.2s;
+  }
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 12px;
 }

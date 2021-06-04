@@ -2,3 +2,9 @@
   @apply block md:hidden;
   border-radius: 8px;
 }
+
+.layoutOne {
+  @screen md {
+    border-radius: 10px;
+  }
+}

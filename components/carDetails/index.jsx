@@ -52,12 +52,14 @@ const CarDetailsComponent = () => {
         <div className={styles.iconsContainer}>
           <div className={styles.iconHolder}>
             <FontAwesomeIcon icon={faHeart} className={styles.icon} />
+            <span>favorite</span>
           </div>
           <div
             className={styles.iconHolder}
             onClick={() => handleToggleModlal()}
           >
             <FontAwesomeIcon icon={faShareAlt} className={styles.icon} />
+            <span>share</span>
           </div>
           <ShareModal
             ismodalOpen={ismodalOpen}
@@ -67,10 +69,12 @@ const CarDetailsComponent = () => {
       </section>
       <section className={styles.carDetails__upperPart}>
         <Advertise />
-        <span className={styles.price}>RWF 6,530,000</span>
-        <h1 className={styles.carName}>
-          MERCEDES BENZ S-500 | 4MATIC | 2021 | BRNAD NEW
-        </h1>
+        <div className="md:flex flex-row-reverse justify-end">
+          <span className={styles.price}>RWF 6,530,000</span>
+          <h1 className={styles.carName}>
+            MERCEDES BENZ S-500 | 4MATIC | 2021 | BRNAD NEW
+          </h1>
+        </div>
         <span className={styles.postTime}>Posted About 21 hours ago</span>
       </section>
       <section className={styles.carDetails__detailsList}>
@@ -116,6 +120,9 @@ const CarDetailsComponent = () => {
             <span className="thin-text-3 text-red-450">0788992942</span>
           </div>
         </div>
+      </section>
+      <section className={styles.carDetails__phoneNumber}>
+        <h1>Phone Number section</h1>
       </section>
       <section className={styles.callFooter}>
         <button className="red-button p-3 w-10/12">Call</button>

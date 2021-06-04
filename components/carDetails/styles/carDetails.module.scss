@@ -1,15 +1,26 @@
 .carDetails {
-  @apply md:container grid;
+  @apply md:container grid md:pt-6;
   grid-template-areas:
     "slider"
     "upperPart"
     "detailsList";
+
+  @screen md {
+    grid-template-areas:
+      "upperPart upperPart"
+      "slider phoneNumber"
+      "detailsList .";
+  }
 
   .carImageSlider {
     @apply relative;
     width: 100%;
     height: 285px;
     grid-area: slider;
+
+    @screen md {
+      height: 371px;
+    }
 
     .slidesNumber {
       @apply absolute bg-gray-420 text-white font-medium p-1.5 flex flex-col items-center justify-center;
@@ -19,6 +30,11 @@
       line-height: 10px;
       border-radius: 10px;
       z-index: 1;
+
+      @screen md {
+        left: inherit;
+        right: 10px;
+      }
     }
 
     .iconsContainer {
@@ -27,8 +43,13 @@
       right: 0;
       z-index: 1;
 
+      @screen md {
+        bottom: inherit;
+        top: 10px;
+      }
+
       .iconHolder {
-        @apply bg-white flex justify-center;
+        @apply bg-white flex justify-center cursor-pointer;
         width: 27px;
         height: 27px;
         border-radius: 50%;
@@ -39,29 +60,48 @@
         .icon {
           width: 12px;
         }
+
+        @screen md {
+          width: 100px;
+          height: inherit;
+          border-radius: 8px;
+
+          .icon {
+            @apply mr-2;
+          }
+        }
       }
     }
   }
 
   .carDetails__upperPart {
     grid-area: upperPart;
-    @apply flex flex-col px-4;
+    @apply flex flex-col px-4 md:px-0;
     margin-top: 30px;
 
     .price {
-      @apply font-bold text-red-450 mt-4;
+      @apply font-bold md:font-medium text-red-450 mt-4;
       font-size: 16px;
       line-height: 24px;
+
+      @screen md {
+        font-size: 28px;
+      }
     }
 
     .carName {
-      @apply font-bold uppercase;
+      @apply font-bold md:font-medium uppercase md:self-end;
       font-size: 18px;
-      line-height: 27px;
+      line-height: 29px;
+
+      @screen md {
+        @apply mr-4;
+        font-size: 29px;
+      }
     }
 
     .postTime {
-      @apply font-light mt-2 text-black-230 border-b border-gray-180 pb-3;
+      @apply font-light mt-2 text-black-230 border-b border-gray-180 pb-6 md:border-b-0;
       font-size: 11px;
       line-height: 16px;
     }
@@ -109,6 +149,11 @@
         line-height: 21px;
       }
     }
+  }
+
+  .carDetails__phoneNumber {
+    @apply hidden md:block;
+    grid-area: phoneNumber;
   }
 
   .callFooter {

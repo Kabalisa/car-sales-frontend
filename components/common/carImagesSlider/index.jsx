@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination } from "swiper";
+import SwiperCore, { Pagination, Navigation } from "swiper";
 import styles from "./styles/carImagesSlider.module.scss";
 
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Navigation]);
 
 const CarImagesSlider = ({ images, setActiveindex, layout }) => {
   const slides = [];
@@ -37,7 +37,9 @@ const CarImagesSlider = ({ images, setActiveindex, layout }) => {
       id="main"
       tag="section"
       wrapperTag="ul"
+      navigation
       onSlideChangeTransitionEnd={handleSlideChangeEnd}
+      className={styles.layoutOne}
     >
       {slides}
     </Swiper>
