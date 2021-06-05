@@ -119,23 +119,43 @@
     }
 
     .firstDetails {
-      @apply w-full flex px-4 pb-3 border-b border-gray-180 mt-2;
+      @apply w-full flex md:flex-col md:items-center px-4 pb-3 border-b border-gray-180 mt-2 md:border-b-0 md:pb-1.5 md:p-1.5 md:mr-2;
+
+      @screen md {
+        width: 100px;
+        height: 100px;
+      }
 
       .firstDetails__title {
-        @apply w-2/5 font-medium;
+        @apply w-2/5 md:w-auto font-medium;
         font-size: 14px;
         line-height: 21px;
       }
 
+      .firstDetails__Icon {
+        @apply hidden md:block md:mt-auto;
+        width: 24px;
+      }
+
       .firstDetails__content {
-        @apply w-3/5 font-light;
+        @apply w-3/5 md:w-auto font-light md:mt-auto;
         font-size: 14px;
         line-height: 21px;
       }
     }
 
     .secondDetails {
-      @apply w-full flex px-4 pb-3 border-b border-gray-180 mt-2;
+      @apply w-full flex px-4 pb-3 border-b border-gray-180 mt-2 md:border md:mt-0 md:py-3;
+
+      &:first-child {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
 
       .secondDetails__title {
         @apply w-2/5 font-medium;
@@ -152,13 +172,32 @@
   }
 
   .carDetails__phoneNumber {
-    @apply hidden md:block;
+    @apply hidden md:flex flex-col p-4;
     grid-area: phoneNumber;
+    margin-left: 30px;
+    width: 273px;
+    height: 150px;
+
+    .carDetails__title {
+      @apply font-medium;
+      font-size: 9px;
+      line-height: 10px;
+    }
+
+    .carDetails__company {
+      @apply font-medium mt-6;
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   .callFooter {
     @apply fixed w-full bottom-0 text-center bg-white md:hidden;
     box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
     padding: 15px 20px;
+  }
+
+  button {
+    outline: none;
   }
 }

@@ -1,0 +1,41 @@
+.content {
+  @apply absolute overscroll-auto outline-none;
+  inset: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 25px;
+  width: 35%;
+  max-height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overlay {
+  @apply fixed inset-0 flex;
+  z-index: 200;
+  background-color: rgba(43, 45, 46, 0.95);
+}
+
+.timesIcon {
+  @apply cursor-pointer;
+  width: 16px;
+}
+
+.userIcon {
+  @apply mr-2;
+  width: 40px;
+  height: 40px;
+}
+
+.tips {
+  @apply box-border text-blue-280 bg-blue-240 w-full mt-6;
+  border-radius: 6px;
+  padding: 24px;
+
+  h1 {
+    @apply font-semibold mb-3;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

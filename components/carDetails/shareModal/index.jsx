@@ -4,13 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles/shareModal.module.scss";
 
-const ShareModal = ({ ismodalOpen, handleToggleModlal }) => {
+const ShareModal = ({ ismodalOpen, handleToggleModal }) => {
   return (
     <Modal
       isOpen={ismodalOpen}
       overlayClassName={styles.overlay}
       className={styles.content}
-      onRequestClose={() => handleToggleModlal()}
+      onRequestClose={() => handleToggleModal()}
     >
       <section className="flex flex-col">
         <div className="flex justify-center relative">
@@ -18,7 +18,7 @@ const ShareModal = ({ ismodalOpen, handleToggleModlal }) => {
           <FontAwesomeIcon
             icon={faTimes}
             className={styles.timesIcon}
-            onClick={() => handleToggleModlal()}
+            onClick={() => handleToggleModal()}
           />
         </div>
         <div className="flex justify-center mt-5">

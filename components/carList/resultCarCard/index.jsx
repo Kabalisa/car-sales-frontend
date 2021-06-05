@@ -24,7 +24,7 @@ const ResultCarCard = () => {
     <div className="pt-1 w-full md:border-t-2 border-gray-360 mt-2">
       <div className={styles.resultCarCard}>
         <div className="flex flex-col-reverse md:flex-row md:justify-between relative">
-          <button className="callButton">
+          <button className="callButton self-end py-1 px-4 md:hidden mt-4 font-medium">
             <FontAwesomeIcon icon={faPhoneAlt} className="callIcon" />
             Call
           </button>

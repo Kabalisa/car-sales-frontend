@@ -29,7 +29,11 @@ const PromotedCar = () => {
             src="/images/moto.jpeg"
             className={styles.PromotedCarImage}
           />
-          <CarImagesSlider images={images} setActiveindex={setActiveindex} layout="two" />
+          <CarImagesSlider
+            images={images}
+            setActiveindex={setActiveindex}
+            layout="two"
+          />
           <div className={styles.cardStatusContainer}>
             <div className="cardStatus bg-red-450 mx-2">Promoted</div>
             <div className="cardStatus bg-blue-270 mx-2">Negotiable</div>
@@ -60,7 +64,7 @@ const PromotedCar = () => {
           <span className="thin-text-2 self-end">72,000</span>
         </div>
       </div>
-      <button className="callButton">
+      <button className="callButton self-end py-1 px-4 md:hidden mt-4 font-medium">
         <FontAwesomeIcon icon={faPhoneAlt} className="callIcon" />
         Call
       </button>

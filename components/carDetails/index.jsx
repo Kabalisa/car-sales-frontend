@@ -1,13 +1,23 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faShareAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faShareAlt,
+  faCog,
+  faTachometerAlt,
+  faHandshake,
+  faCalendarAlt,
+  faBurn,
+} from "@fortawesome/free-solid-svg-icons";
 import { CarImagesSlider, Advertise } from "../common";
 import { ShareModal } from "./shareModal";
+import { PhoneModal } from "./shareModal/phoneNumber";
 import styles from "./styles/carDetails.module.scss";
 
 const CarDetailsComponent = () => {
   const [activeIndex, setActiveindex] = useState(1);
   const [ismodalOpen, setIsmodalOpen] = useState(false);
+  const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
 
   const images = [
     "/images/car1.jpeg",
@@ -18,11 +28,11 @@ const CarDetailsComponent = () => {
   ];
 
   const firstDetails = [
-    { title: "Trim", content: "S-500" },
-    { title: "Kilometers", content: "0" },
-    { title: "Warranty", content: "No" },
-    { title: "Color", content: "White" },
-    { title: "Year", content: "2020" },
+    { title: "Trim", content: "S-500", icon: faCog },
+    { title: "Kilometers", content: "0", icon: faTachometerAlt },
+    { title: "Warranty", content: "No", icon: faHandshake },
+    { title: "Color", content: "White", icon: faBurn },
+    { title: "Year", content: "2020", icon: faCalendarAlt },
   ];
 
   const secondDetails = [
@@ -38,8 +48,12 @@ const CarDetailsComponent = () => {
     { title: "Fuel type", content: "Gasoline" },
   ];
 
-  const handleToggleModlal = () => {
+  const handleToggleModal = () => {
     setIsmodalOpen(!ismodalOpen);
+  };
+
+  const handleTogglePhoneModal = () => {
+    setIsPhoneModalOpen(!isPhoneModalOpen);
   };
 
   return (
@@ -52,18 +66,22 @@ const CarDetailsComponent = () => {
         <div className={styles.iconsContainer}>
           <div className={styles.iconHolder}>
             <FontAwesomeIcon icon={faHeart} className={styles.icon} />
-            <span>favorite</span>
+            <span className="thin-text-3 self-center hidden md:block">
+              favorite
+            </span>
           </div>
           <div
             className={styles.iconHolder}
-            onClick={() => handleToggleModlal()}
+            onClick={() => handleToggleModal()}
           >
             <FontAwesomeIcon icon={faShareAlt} className={styles.icon} />
-            <span>share</span>
+            <span className="thin-text-3 self-center hidden md:block">
+              share
+            </span>
           </div>
           <ShareModal
             ismodalOpen={ismodalOpen}
-            handleToggleModlal={handleToggleModlal}
+            handleToggleModal={handleToggleModal}
           />
         </div>
       </section>
@@ -78,12 +96,19 @@ const CarDetailsComponent = () => {
         <span className={styles.postTime}>Posted About 21 hours ago</span>
       </section>
       <section className={styles.carDetails__detailsList}>
-        <h1 className={`${styles.detailTitle} px-4`}>Details</h1>
-        <div className="flex flex-col">
+        <h1 className={`${styles.detailTitle} px-4 md:px-0`}>Details</h1>
+        <div className="flex flex-col md:flex-row md:flex-wrap md:justify-between">
           {firstDetails.map((item, index) => {
             return (
-              <div className={styles.firstDetails} key={index}>
+              <div
+                className={`${styles.firstDetails} md:card-shadow`}
+                key={index}
+              >
                 <span className={styles.firstDetails__title}>{item.title}</span>
+                <FontAwesomeIcon
+                  className={styles.firstDetails__Icon}
+                  icon={item.icon}
+                />
                 <span className={styles.firstDetails__content}>
                   {item.content}
                 </span>
@@ -91,7 +116,7 @@ const CarDetailsComponent = () => {
             );
           })}
         </div>
-        <div className="flex flex-col mb-5">
+        <div className="flex flex-col mb-5 md:mt-8">
           {secondDetails.map((item, index) => {
             return (
               <div className={styles.secondDetails} key={index}>
@@ -121,8 +146,19 @@ const CarDetailsComponent = () => {
           </div>
         </div>
       </section>
-      <section className={styles.carDetails__phoneNumber}>
-        <h1>Phone Number section</h1>
+      <section className={`${styles.carDetails__phoneNumber} card-shadow`}>
+        <span className={styles.carDetails__title}>Posted by</span>
+        <h1 className={styles.carDetails__company}>Akagera Motors</h1>
+        <button
+          className="callButton w-full p-3 font-semibold flex justify-center mt-auto"
+          onClick={() => handleTogglePhoneModal()}
+        >
+          Show Phone number
+        </button>
+        <PhoneModal
+          isPhoneModalOpen={isPhoneModalOpen}
+          handleTogglePhoneModal={handleTogglePhoneModal}
+        />
       </section>
       <section className={styles.callFooter}>
         <button className="red-button p-3 w-10/12">Call</button>
