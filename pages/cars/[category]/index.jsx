@@ -4,12 +4,12 @@ import { CarListComponent } from "../../../components";
 
 const CarList = () => {
   const router = useRouter();
-  const { type } = router.query;
+  const { category } = router.query;
 
   return (
     <>
       <Head>
-        <title>{type} | Best Cars</title>
+        <title>{category} | Best Cars</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

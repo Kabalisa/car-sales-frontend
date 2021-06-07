@@ -33,10 +33,12 @@ const MobileFooter = () => {
           <span className={styles.linkTitle}>Post an ad</span>
         </a>
       </Link>
-      <Link href="/">
+      <Link href="/login">
         <a className={styles.link}>
           <FontAwesomeIcon icon={faUser} className={styles.linkIcon} />
-          <span className={styles.linkTitle}>Profile</span>
+          <span className={styles.linkTitle}>
+            {!true ? "Profile" : "Log in"}
+          </span>
         </a>
       </Link>
     </div>

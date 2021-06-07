@@ -6,7 +6,9 @@ const Footer = ({ layout }) => {
   return (
     <footer
       className={`${styles.footer} ${
-        layout === "secondType" ? styles.footerHidden : ""
+        layout === "secondType" || layout === "thirdType"
+          ? styles.footerHidden
+          : ""
       }`}
     >
       <MobileFooter />
