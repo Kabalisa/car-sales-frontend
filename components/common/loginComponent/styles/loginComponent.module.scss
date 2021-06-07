@@ -1,0 +1,45 @@
+.loginContainer {
+  @apply container flex flex-col items-center;
+  height: 90vh;
+
+  @screen md {
+    height: inherit;
+  }
+
+  .loginTitle {
+    @apply text-center font-medium mt-20;
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .loginButton {
+    @apply bg-white border border-gray-370 flex items-center px-6 py-3 font-medium;
+    max-width: 347px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 24px;
+
+    @screen xs {
+      width: 347px;
+    }
+
+    .loginIcon {
+      @apply mr-8;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .createAccount {
+    @apply font-medium text-red-450 mt-10;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .footerText {
+    @apply font-light border-gray-430 text-center mt-auto mb-5;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

@@ -25,6 +25,7 @@ module.exports = {
           390: "#F5F5F5",
           410: "#4d4d4d",
           420: "#757575",
+          430: "#8a8a8a",
         },
         red: {
           410: "#f23d3d",
@@ -53,6 +54,9 @@ module.exports = {
       },
     },
     screens: {
+      xs: "345px",
+      // => @media (min-width: 640px) { ... }
+
       sm: "640px",
       // => @media (min-width: 640px) { ... }
 
