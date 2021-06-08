@@ -3,6 +3,10 @@
   padding-top: 14px;
   padding-bottom: 9px;
 
+  @screen xs {
+    max-width: 100%;
+  }
+
   @screen sm {
     max-width: 100%;
   }

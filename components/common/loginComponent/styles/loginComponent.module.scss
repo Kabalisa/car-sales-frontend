@@ -13,7 +13,7 @@
   }
 
   .loginButton {
-    @apply bg-white border border-gray-370 flex items-center px-6 py-3 font-medium;
+    @apply bg-white border border-gray-370 flex items-center px-6 py-3 font-medium outline-none;
     max-width: 347px;
     width: 100%;
     border-radius: 6px;
@@ -31,7 +31,38 @@
     }
   }
 
-  .createAccount {
+  .loginInput {
+    @apply bg-white border border-black-130 font-light text-gray-360 p-3 hover:border-black-210 focus:border-black-210 outline-none;
+    max-width: 347px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 27px;
+
+    @screen xs {
+      width: 347px;
+    }
+  }
+
+  .show {
+    @apply absolute font-bold text-red-450;
+    font-size: 12px;
+    line-height: 18px;
+    right: 10px;
+    top: 35%;
+  }
+
+  .loginRedButton {
+    @apply p-3 mt-10  outline-none;
+    max-width: 347px;
+    width: 100%;
+
+    @screen xs {
+      width: 347px;
+    }
+  }
+
+  .redText {
     @apply font-medium text-red-450 mt-10;
     font-size: 16px;
     line-height: 24px;

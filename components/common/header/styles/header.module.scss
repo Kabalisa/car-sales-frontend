@@ -7,7 +7,7 @@
     height: 40px;
 
     .goBack {
-      @apply bg-white flex justify-center;
+      @apply bg-white flex justify-center cursor-pointer;
       width: 25px;
       height: 25px;
       border-radius: 50%;

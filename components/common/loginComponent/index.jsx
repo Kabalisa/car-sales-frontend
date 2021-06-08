@@ -1,10 +1,23 @@
+import { useState } from "react";
 import { LoginOptions } from "./loginOptions";
-import styles from "./styles/loginComponent.module.scss";
+import { EmailLogin } from "./emailLogin";
+import { EmailSignup } from "./emailSignup";
 
 const LoginComponent = () => {
+  const [view, setView] = useState({
+    options: true,
+    login: false,
+  });
+
   return (
     <>
-      <LoginOptions />
+      {view.options ? (
+        <LoginOptions setView={setView} />
+      ) : view.login ? (
+        <EmailLogin />
+      ) : (
+        <EmailSignup />
+      )}
     </>
   );
 };

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronDown,
@@ -7,17 +8,17 @@ import {
 import styles from "./styles/header.module.scss";
 
 const Header = ({ layout }) => {
+  const router = useRouter();
+
   return (
     <nav className={styles.headerContainer}>
       <div className={layout ? styles.goBackContainer : "hidden"}>
-        <Link href="/">
-          <a className={styles.goBack}>
-            <FontAwesomeIcon
-              icon={faLongArrowAltLeft}
-              className={styles.longArrowLeft}
-            />
-          </a>
-        </Link>
+        <div className={styles.goBack} onClick={() => router.back()}>
+          <FontAwesomeIcon
+            icon={faLongArrowAltLeft}
+            className={styles.longArrowLeft}
+          />
+        </div>
       </div>
       <div
         className={`${styles.header} ${

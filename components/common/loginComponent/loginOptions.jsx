@@ -1,10 +1,10 @@
 import Link from "next/link";
+import { LoginLayout } from "./layout";
 import styles from "./styles/loginComponent.module.scss";
 
-const LoginOptions = () => {
+const LoginOptions = ({ setView }) => {
   return (
-    <section className={styles.loginContainer}>
-      <h1 className={styles.loginTitle}>Log in to post an ad</h1>
+    <LoginLayout title="Log in to post an ad">
       <ul className="flex flex-col">
         <li className="mt-6">
           <button className={styles.loginButton}>
@@ -27,7 +27,15 @@ const LoginOptions = () => {
           </button>
         </li>
         <li className="mt-6">
-          <button className={styles.loginButton}>
+          <button
+            className={styles.loginButton}
+            onClick={() =>
+              setView({
+                options: false,
+                login: true,
+              })
+            }
+          >
             <img
               alt="facebook icon"
               className={styles.loginIcon}
@@ -37,20 +45,18 @@ const LoginOptions = () => {
           </button>
         </li>
       </ul>
-      <span className={styles.createAccount}>
+      <span
+        className={styles.redText}
+        onClick={() =>
+          setView({
+            options: false,
+            login: false,
+          })
+        }
+      >
         Don’t have an account? create one
       </span>
-      <span className={styles.footerText}>
-        By signing up I agree to the{" "}
-        <Link href="/">
-          <a className="text-blue-270">terms and condition </a>
-        </Link>
-        and{" "}
-        <Link href="/">
-          <a className="text-blue-270">privacy piolicy</a>
-        </Link>
-      </span>
-    </section>
+    </LoginLayout>
   );
 };
 
