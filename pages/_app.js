@@ -1,11 +1,15 @@
+import { Provider } from "react-redux";
 import "../styles/globals.scss";
 import { AppLayout } from "../components";
+import store from "../redux/store";
 
 const AppComponent = ({ Component, pageProps }) => {
   return (
-    <AppLayout layout={pageProps.layout}>
-      <Component {...pageProps} />
-    </AppLayout>
+    <Provider store={store}>
+      <AppLayout layout={pageProps.layout}>
+        <Component {...pageProps} />
+      </AppLayout>
+    </Provider>
   );
 };
 

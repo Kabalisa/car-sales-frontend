@@ -5,6 +5,9 @@ import {
   faChevronDown,
   faLongArrowAltLeft,
 } from "@fortawesome/free-solid-svg-icons";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as loginActions from "../../../redux/actions";
 import styles from "./styles/header.module.scss";
 
 const Header = ({ layout }) => {
@@ -79,4 +82,12 @@ const Header = ({ layout }) => {
   );
 };
 
-export { Header };
+const mapStateToProps = ({ loginReducer }) => ({
+  openModel: loginReducer.openModel,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(loginActions, dispatch),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
