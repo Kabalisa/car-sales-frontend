@@ -2,9 +2,13 @@
   @apply md:border-b;
 
   .goBackContainer {
-    @apply container flex items-center md:hidden absolute;
+    @apply container flex items-center md:hidden;
     z-index: 20;
     height: 40px;
+
+    @screen xs {
+      max-width: 100%;
+    }
 
     .goBack {
       @apply bg-white flex justify-center cursor-pointer;

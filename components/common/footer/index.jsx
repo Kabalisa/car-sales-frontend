@@ -4,13 +4,7 @@ import { DesktopFooter } from "./desktopFooter";
 
 const Footer = ({ layout }) => {
   return (
-    <footer
-      className={`${styles.footer} ${
-        layout === "secondType" || layout === "thirdType"
-          ? styles.footerHidden
-          : ""
-      }`}
-    >
+    <footer className={`${styles.footer} ${layout ? styles.footerHidden : ""}`}>
       <MobileFooter />
       <DesktopFooter />
     </footer>

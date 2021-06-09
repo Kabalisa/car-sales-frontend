@@ -15,7 +15,11 @@ const Header = ({ layout, modalOpen, actions }) => {
 
   return (
     <nav className={styles.headerContainer}>
-      <div className={layout ? styles.goBackContainer : "hidden"}>
+      <div
+        className={`${layout ? styles.goBackContainer : "hidden"} ${
+          layout === "secondType" || layout === "thirdType" ? "absolute" : ""
+        }`}
+      >
         <div className={styles.goBack} onClick={() => router.back()}>
           <FontAwesomeIcon
             icon={faLongArrowAltLeft}
@@ -25,7 +29,9 @@ const Header = ({ layout, modalOpen, actions }) => {
       </div>
       <div
         className={`${styles.header} ${
-          layout === "secondType" ? styles.headerHidden : ""
+          layout === "secondType" || layout === "fourthType"
+            ? styles.headerHidden
+            : ""
         }`}
       >
         <h1 className={styles.title}>
@@ -78,8 +84,11 @@ const Header = ({ layout, modalOpen, actions }) => {
               </ul>
             </div>
           </div>
-          <button className="hidden md:block self-center p-2 red-button">
-            Sell my car
+          <button
+            className="hidden md:block self-center p-2 red-button"
+            onClick={() => router.push("/post-an-ad")}
+          >
+            Post an ad
           </button>
         </div>
       </div>

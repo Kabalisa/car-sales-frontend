@@ -1,0 +1,30 @@
+.container {
+  @screen md {
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .title {
+    @apply font-bold text-center my-12;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .category {
+    @apply w-full flex justify-between;
+
+    .category__title {
+      @apply font-bold;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .category__icon {
+      @apply self-center;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

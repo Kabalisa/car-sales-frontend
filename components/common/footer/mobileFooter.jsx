@@ -23,7 +23,7 @@ const MobileFooter = () => {
           <span className={styles.linkTitle}>Search</span>
         </a>
       </Link>
-      <Link href="/">
+      <Link href="/post-an-ad">
         <a className={styles.link}>
           <FontAwesomeIcon
             icon={faPlusCircle}
