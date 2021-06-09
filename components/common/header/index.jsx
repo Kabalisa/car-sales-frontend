@@ -7,10 +7,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as loginActions from "../../../redux/actions";
+import * as loginActions from "../../../redux/actions/loginActions";
 import styles from "./styles/header.module.scss";
 
-const Header = ({ layout }) => {
+const Header = ({ layout, modalOpen, actions }) => {
   const router = useRouter();
 
   return (
@@ -36,7 +36,12 @@ const Header = ({ layout }) => {
           </Link>
         </h1>
         <div className="flex">
-          <div className={styles.loginSignup}>Login or sign up</div>
+          <div
+            className={styles.loginSignup}
+            onClick={() => actions.toggleLoginModal()}
+          >
+            Login or sign up
+          </div>
           <div className={styles.dropdown}>
             <div className="flex h-full">
               <div className={styles.userAvatar}>KI</div>
@@ -83,7 +88,7 @@ const Header = ({ layout }) => {
 };
 
 const mapStateToProps = ({ loginReducer }) => ({
-  openModel: loginReducer.openModel,
+  modalOpen: loginReducer.modalOpen,
 });
 
 const mapDispatchToProps = (dispatch) => ({

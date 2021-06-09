@@ -2,6 +2,7 @@ import { HeroBanner } from "./heroBanner";
 import { Category } from "./category";
 import { CarDealer } from "./carDealer";
 import { FeaturedCar } from "./featuredCar";
+import DesktopLogin from "../Login/desktopLogin";
 
 const LandingPageComponent = () => {
   const arr = [
@@ -27,6 +28,7 @@ const LandingPageComponent = () => {
       <section className="pl-4 md:pl-0">
         <FeaturedCar />
       </section>
+      <DesktopLogin />
     </main>
   );
 };

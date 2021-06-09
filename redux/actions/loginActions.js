@@ -1,3 +1,3 @@
 import * as types from "../types/actionTypes";
 
-export const openLoginModal = () => ({ type: types.OPEN_LOGIN_MODEL });
+export const toggleLoginModal = () => ({ type: types.TOGGLE_LOGIN_MODEL });

@@ -1,11 +1,16 @@
 .content {
-  @apply absolute overscroll-auto outline-none;
+  @apply absolute overscroll-auto outline-none md:mr-auto md:ml-auto;
   inset: 40px;
   border: 1px solid rgb(204, 204, 204);
   background: rgb(255, 255, 255);
   border-radius: 8px;
   padding: 20px;
   max-height: 200px;
+  width: auto;
+
+  @screen md {
+    width: 450px;
+  }
 }
 
 .overlay {

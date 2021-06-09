@@ -1,0 +1,27 @@
+.content {
+  @apply absolute overscroll-auto outline-none h-full;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 20px;
+  width: 456px;
+  max-height: 600px;
+  top: 10%;
+  left: calc(50% - 228px);
+}
+
+.overlay {
+  @apply fixed inset-0;
+  z-index: 200;
+  background-color: rgba(43, 45, 46, 0.95);
+}
+
+.timesIcon {
+  @apply cursor-pointer ml-auto;
+  width: 16px;
+}
+
+.backIcon {
+  @apply cursor-pointer;
+  width: 16px;
+}

@@ -1,18 +1,18 @@
-import { OPEN_LOGIN_MODEL } from "../types/actionTypes";
+import { TOGGLE_LOGIN_MODEL } from "../types/actionTypes";
 
 const initialState = {
-  modelOpen: false,
+  modalOpen: false,
 };
 
 const loginReducer = (state = initialState, action) => {
   switch (action.type) {
-    case OPEN_LOGIN_MODEL:
+    case TOGGLE_LOGIN_MODEL:
       return {
         ...state,
-        modelOpen: true,
+        modalOpen: !state.modalOpen,
       };
     default:
-      state;
+      return state;
   }
 };
 
