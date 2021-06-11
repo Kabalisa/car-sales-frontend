@@ -18,4 +18,8 @@
   &.footerHidden {
     @apply hidden md:block;
   }
+
+  &.hideFooter {
+    display: none !important;
+  }
 }

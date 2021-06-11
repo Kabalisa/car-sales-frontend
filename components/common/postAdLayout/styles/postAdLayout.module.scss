@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  @screen md {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  .title {
+    @apply font-bold text-center my-12;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

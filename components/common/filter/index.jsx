@@ -1,8 +1,8 @@
 import styles from "./styles/filter.module.scss";
 
-const Filter = () => {
+const Filter = ({ layout }) => {
   return (
-    <div className="md:border-b">
+    <div className={`${layout === "fourthType" ? "hidden" : ""} md:border-b`}>
       <div className={styles.filter}>
         <div className={`${styles.filterItem} ${styles.active}`}>Used Cars</div>
         <div className={styles.filterItem}>New Cars</div>

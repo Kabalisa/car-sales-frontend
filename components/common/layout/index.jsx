@@ -6,7 +6,7 @@ const AppLayout = ({ children, layout }) => {
   return (
     <>
       <Header layout={layout} />
-      <Filter />
+      <Filter layout={layout} />
       {children}
       <Footer layout={layout} />
     </>

@@ -17,7 +17,11 @@ const Header = ({ layout, modalOpen, actions }) => {
     <nav className={styles.headerContainer}>
       <div
         className={`${layout ? styles.goBackContainer : "hidden"} ${
-          layout === "secondType" || layout === "thirdType" ? "absolute" : ""
+          layout === "secondType" || layout === "thirdType"
+            ? "absolute"
+            : layout === "fourthType"
+            ? styles.goBackContainer__fourth
+            : ""
         }`}
       >
         <div className={styles.goBack} onClick={() => router.back()}>
@@ -29,8 +33,10 @@ const Header = ({ layout, modalOpen, actions }) => {
       </div>
       <div
         className={`${styles.header} ${
-          layout === "secondType" || layout === "fourthType"
+          layout === "secondType"
             ? styles.headerHidden
+            : layout === "fourthType"
+            ? styles.fourthHeaderLayout
             : ""
         }`}
       >
@@ -41,7 +47,7 @@ const Header = ({ layout, modalOpen, actions }) => {
             </a>
           </Link>
         </h1>
-        <div className="flex">
+        <div className={`${layout === "fourthType" ? "hidden" : ""} flex`}>
           <div
             className={styles.loginSignup}
             onClick={() => actions.toggleLoginModal()}

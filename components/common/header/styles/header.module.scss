@@ -20,6 +20,23 @@
         width: 17px;
       }
     }
+
+    &.goBackContainer__fourth {
+      @screen md {
+        display: flex !important;
+        position: absolute;
+        top: 10px;
+        left: 25%;
+      }
+
+      @screen lg {
+        left: 30%;
+      }
+
+      @screen xl {
+        left: 37%;
+      }
+    }
   }
 
   .header {
@@ -28,6 +45,10 @@
 
     &.headerHidden {
       @apply hidden md:flex;
+    }
+
+    &.fourthHeaderLayout {
+      @apply hidden md:flex justify-center;
     }
 
     .title {

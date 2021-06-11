@@ -5,3 +5,4 @@ export * from "./carDetails";
 export * from "./Login/mobileLogin";
 export * from "./Login/desktopLogin";
 export * from "./postAnAd";
+export * from "./postAnAd/motors";
