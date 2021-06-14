@@ -46,10 +46,18 @@
     line-height: 19px;
   }
 
+  .medium-text-1 {
+    @apply font-medium;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 19px;
+  }
+
   .red-button {
     @apply bg-red-450 text-white font-semibold;
     font-size: 14px;
     border-radius: 10px;
+    outline: none;
 
     &:hover {
       @apply bg-red-410;
@@ -66,9 +74,25 @@
     background-position-y: 50%;
     background-position-x: calc(100% - 16px);
 
+    &.select-2 {
+      background: url("/images/sidewayArrow.png");
+      background-repeat: no-repeat;
+      background-position-y: 50%;
+      background-position-x: calc(100% - 16px);
+      background-size: 35px;
+    }
+
     @screen md {
       background: white;
       appearance: auto !important;
+
+      &.select-2 {
+        background: url("/images/sidewayArrow.png");
+        background-repeat: no-repeat;
+        background-position-y: 50%;
+        background-position-x: calc(100% - 16px);
+        background-size: 35px;
+      }
     }
   }
 

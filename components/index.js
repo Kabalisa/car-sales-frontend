@@ -6,3 +6,4 @@ export * from "./Login/mobileLogin";
 export * from "./Login/desktopLogin";
 export * from "./postAnAd";
 export * from "./postAnAd/motors";
+export * from "./postAnAd/motors/moreDetails";

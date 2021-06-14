@@ -1,0 +1,27 @@
+.text {
+  @apply font-light;
+  font-size: 14px;
+  line-height: 21px;
+  max-width: 284px;
+  margin: 0 auto;
+}
+
+.boldText {
+  @apply font-bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cameraIcon {
+  @apply mr-2;
+  width: 16px;
+}
+
+.textarea {
+  resize: none;
+  height: 167px;
+}
+
+.wrapper{
+  max-width: 460px;
+}

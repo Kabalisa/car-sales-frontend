@@ -1,7 +1,10 @@
+import { useRouter } from "next/router";
 import { PostAdLayout } from "../../common";
 import styles from "./styles/motors.module.scss";
 
 const Motors = ({ category }) => {
+  const router = useRouter();
+
   return (
     <PostAdLayout title={`Tell us about your ${category}`}>
       <ul className="flex flex-col px-4">
@@ -36,7 +39,12 @@ const Motors = ({ category }) => {
         <li className="py-3">
           <input placeholder="Phone number" className="app-input w-full p-3" />
         </li>
-        <button className="red-button w-full p-3 my-12">Next</button>
+        <button
+          className="red-button w-full p-3 my-12"
+          onClick={() => router.push(`/post-an-ad/${category}/moreDetails`)}
+        >
+          Next
+        </button>
       </ul>
     </PostAdLayout>
   );
