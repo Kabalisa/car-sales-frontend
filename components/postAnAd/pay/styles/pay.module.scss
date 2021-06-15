@@ -1,0 +1,46 @@
+.titleCard {
+  @apply flex justify-center w-full font-semibold text-black-120 p-3;
+  background: rgba(244, 192, 201, 0.502);
+  border-radius: 10px;
+  font-size: 14px;
+
+  .cardIcon {
+    @apply mr-2;
+    width: 18px;
+  }
+}
+
+.label {
+  @apply font-semibold text-black-120;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.input {
+  @apply border-b border-gray-180 focus:border-black-120 outline-none pt-1 pb-2 uppercase;
+  font-size: 15px;
+  line-height: 26px;
+
+  &::placeholder {
+    @apply capitalize;
+  }
+}
+
+.timeInput {
+  @apply border-b border-gray-180 focus:border-black-120 outline-none pt-1 pb-2 w-1/4;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.separator {
+  @apply self-center mr-1.5;
+}
+
+.payButton {
+  @apply bg-green-500 text-white font-semibold uppercase p-3 mt-8 hover:bg-green-600;
+  font-size: 16px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  outline: none;
+  transition: 0.2s;
+}

@@ -1,25 +1,25 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { BundleComponent } from "../../../components";
+import { PayComponent } from "../../../components";
 
-const Bundle = () => {
+const Pay = () => {
   const router = useRouter();
   const { category } = router.query;
 
   return (
     <>
       <Head>
-        <title>{category} Ad Bundle | Best Cars</title>
+        <title>Pay for {category} Ad | Best Cars</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <BundleComponent category={category} />
+      <PayComponent />
     </>
   );
 };
 
-Bundle.getInitialProps = () => {
+Pay.getInitialProps = () => {
   return { layout: "fourthType" };
 };
 
-export default Bundle;
+export default Pay;

@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
@@ -7,7 +8,9 @@ import {
 import { PostAdLayout } from "../../common";
 import styles from "./styles/motors.module.scss";
 
-const BundleComponent = () => {
+const BundleComponent = ({ category }) => {
+  const router = useRouter();
+
   return (
     <PostAdLayout title="Select a bundle that is right for you">
       <section className="px-4 flex flex-col">
@@ -25,7 +28,10 @@ const BundleComponent = () => {
               />
               no featured days
             </div>
-            <div className={styles.selectBundle}>
+            <div
+              className={styles.selectBundle}
+              onClick={() => router.push(`/post-an-ad/${category}/pay`)}
+            >
               <FontAwesomeIcon
                 className={styles.arrowIcon}
                 icon={faArrowRight}
@@ -49,7 +55,10 @@ const BundleComponent = () => {
               />
               featured days
             </div>
-            <div className={styles.selectBundle}>
+            <div
+              className={styles.selectBundle}
+              onClick={() => router.push(`/post-an-ad/${category}/pay`)}
+            >
               <FontAwesomeIcon
                 className={styles.arrowIcon}
                 icon={faArrowRight}

@@ -8,3 +8,4 @@ export * from "./postAnAd";
 export * from "./postAnAd/motors";
 export * from "./postAnAd/motors/moreDetails";
 export * from "./postAnAd/motors/bundle";
+export * from "./postAnAd/pay";
