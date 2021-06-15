@@ -22,6 +22,50 @@
   height: 167px;
 }
 
-.wrapper{
+.wrapper {
   max-width: 460px;
+}
+
+.bundle {
+  @apply border border-gray-190 mt-4 flex flex-col;
+  border-radius: 10px;
+  padding: 15px 24px;
+
+  .title_text1 {
+    @apply font-semibold text-gray-365 self-end uppercase;
+    font-size: 13px;
+  }
+
+  .title_text2 {
+    @apply font-semibold text-black-120 uppercase;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .paragraph {
+    @apply mt-2 font-semibold text-gray-440 w-3/5;
+    font-size: 15px;
+  }
+
+  .benefits {
+    @apply flex font-normal text-gray-365 self-center;
+    font-size: 14px;
+
+    .beforeIcon {
+      @apply mr-2;
+      width: 10px;
+    }
+  }
+
+  .selectBundle {
+    @apply bg-red-450 flex flex-col justify-center items-center cursor-pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    .arrowIcon {
+      @apply text-white;
+      width: 15px;
+    }
+  }
 }

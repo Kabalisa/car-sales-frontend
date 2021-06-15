@@ -1,9 +1,11 @@
+import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { PostAdLayout } from "../../common";
 import styles from "./styles/motors.module.scss";
 
-const MoreDetailsComponent = () => {
+const MoreDetailsComponent = ({ category }) => {
+  const router = useRouter();
   const arr = [
     { title: "Model", content: "BMW i3" },
     { title: "Year of mufacture", content: "2019" },
@@ -69,10 +71,13 @@ const MoreDetailsComponent = () => {
             );
           })}
         </ul>
-        <div
-          className={`bg-white p-3 fixed bottom-0 w-full ${styles.wrapper}`}
-        >
-          <button className="red-button w-11/12 p-3 md:ml-2">Next</button>
+        <div className={`bg-white p-3 fixed bottom-0 w-full ${styles.wrapper}`}>
+          <button
+            className="red-button w-11/12 p-3 md:ml-2"
+            onClick={() => router.push(`/post-an-ad/${category}/bundle`)}
+          >
+            Next
+          </button>
         </div>
       </section>
     </PostAdLayout>

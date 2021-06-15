@@ -1,25 +1,25 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { MoreDetailsComponent } from "../../../components";
+import { BundleComponent } from "../../../components";
 
-const MoreDetails = () => {
+const Bundle = () => {
   const router = useRouter();
   const { category } = router.query;
 
   return (
     <>
       <Head>
-        <title> {category} Ad More Details | Best Cars</title>
+        <title>{category} Ad Bundle | Best Cars</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <MoreDetailsComponent category={category} />
+      <BundleComponent />
     </>
   );
 };
 
-MoreDetails.getInitialProps = () => {
+Bundle.getInitialProps = () => {
   return { layout: "fourthType" };
 };
 
-export default MoreDetails;
+export default Bundle;
