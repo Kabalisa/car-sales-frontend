@@ -87,11 +87,7 @@
       appearance: auto !important;
 
       &.select-2 {
-        background: url("/images/sidewayArrow.png");
-        background-repeat: no-repeat;
-        background-position-y: 50%;
-        background-position-x: calc(100% - 16px);
-        background-size: 35px;
+        appearance: none !important;
       }
     }
   }

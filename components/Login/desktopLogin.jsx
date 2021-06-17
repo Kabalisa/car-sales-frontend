@@ -12,13 +12,24 @@ const DesktopLogin = ({ modalOpen, actions }) => {
   const [view, setView] = useState({
     options: true,
     login: false,
+    choose: false,
+    businessSignup: false,
   });
 
   const handleBack = () => {
-    setView({
-      options: true,
-      login: false,
-    });
+    if (view.login || view.choose) {
+      setView({
+        ...view,
+        options: true,
+        login: false,
+      });
+    } else {
+      setView({
+        ...view,
+        businessSignup: false,
+        choose: true,
+      });
+    }
   };
 
   return (

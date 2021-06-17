@@ -16,8 +16,8 @@ const Header = ({ layout, modalOpen, actions }) => {
   return (
     <nav className={styles.headerContainer}>
       <div
-        className={`${layout ? styles.goBackContainer : "hidden"} ${
-          layout === "secondType" || layout === "thirdType"
+        className={`${layout && layout !== "thirdType" ? styles.goBackContainer : "hidden"} ${
+          layout === "secondType"
             ? "absolute"
             : layout === "fourthType"
             ? styles.goBackContainer__fourth

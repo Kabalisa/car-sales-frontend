@@ -2,7 +2,7 @@ import Link from "next/link";
 import { LoginLayout } from "./layout";
 import styles from "./styles/loginComponent.module.scss";
 
-const LoginOptions = ({ setView }) => {
+const LoginOptions = ({ view, setView }) => {
   return (
     <LoginLayout title="Log in to post an ad">
       <ul className="flex flex-col">
@@ -31,6 +31,7 @@ const LoginOptions = ({ setView }) => {
             className={styles.loginButton}
             onClick={() =>
               setView({
+                ...view,
                 options: false,
                 login: true,
               })
@@ -49,8 +50,9 @@ const LoginOptions = ({ setView }) => {
         className={styles.redText}
         onClick={() =>
           setView({
+            ...view,
             options: false,
-            login: false,
+            choose: true
           })
         }
       >

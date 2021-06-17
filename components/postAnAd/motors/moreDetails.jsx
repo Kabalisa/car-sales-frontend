@@ -18,6 +18,7 @@ const MoreDetailsComponent = ({ category }) => {
     "Body Condition",
     "Mechanical Condition",
     "Color",
+    "Seller type",
     "transmission type",
     "fuel type",
   ];

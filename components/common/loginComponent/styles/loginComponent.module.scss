@@ -7,7 +7,7 @@
   }
 
   .loginTitle {
-    @apply text-center font-medium mt-20;
+    @apply text-center font-medium mt-20 md:mt-10;
     font-size: 28px;
     line-height: 42px;
   }
@@ -72,5 +72,33 @@
     @apply font-light border-gray-430 text-center mt-auto mb-5;
     font-size: 12px;
     line-height: 18px;
+  }
+}
+
+.accountTypeContainer {
+  @apply container flex flex-col items-center justify-center;
+  height: 70vh;
+
+  @screen md {
+    height: inherit;
+  }
+
+  .accountButton {
+    @apply bg-red-450 text-white border-none flex items-center px-6 py-3 font-bold outline-none;
+    max-width: 347px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 24px;
+
+    @screen xs {
+      width: 347px;
+    }
+
+    .accountIcon {
+      @apply mr-8;
+      width: 25px;
+      height: 25px;
+    }
   }
 }
